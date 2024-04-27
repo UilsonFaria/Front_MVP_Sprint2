@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts-icones.css">
+
+	<title>Cooperativa Service</title>
+ 
+</head>
+
+<body>
+
+<main class="main_content container">
+        
+    <section class="section-seu-codigo container">
+        
+        <div class="content">
+                        
+            <div class="box-artigo">
+                           
+                <!--Inícia Formulário-->
+                <div class="container_form">
+        
+                        <h1>Solicitação de Serviço</h1>
+
+                        <form class="form" action="#" method="post">
+
+                            <div class="form_grupo">
+                                <label for="telefone" class="form_label">Telefone</label>
+                                <input type="tel" name="telefone" class="form_input" id="telefone" placeholder="Informe o telefone com DDD" onfocusout="obtemDados()" required>
+                            </div>                                
+
+                            <div class="form_grupo">
+                                <label for="nome" class="form_label">Nome</label>
+                                <input type="text" name="nome" class="form_input" id="nome" placeholder="Nome" required>
+                            </div>
+                            
+                            <div class="form_grupo">
+                                <label for="e-mail" class="form_label">Email</label>
+                                <input type="email" name="email" class="form_input" id="email" placeholder="seuemail@email.com" required>
+                            </div>
+
+                            <div class="form_grupo">
+                                <label for="cep" class="form_label">CEP</label>
+                                <input type="text" name="cep" class="form_input" id="cep" placeholder="99999-999" onfocusout="consultaCEP()" required>
+                            </div>    
+                            
+                            <div class="form_grupo">
+                                <label for="logradouro" class="form_label">Logradouro</label>
+                                <input type="text" name="logradouro" class="form_input" id="logradouro" disabled>
+                            </div>
+                            
+                            <div class="form_grupo">
+                                <label for="numero" class="form_label">Número</label>
+                                <input type="text" name="numero" class="form_input" id="numero" placeholder="Numero" required>
+                            </div>
+                            
+                            <div class="form_grupo">
+                                <label for="complemento" class="form_label">Complemento</label>
+                                <input type="text" name="complemento" class="form_input" id="complemento" placeholder="Complemento">
+                            </div>
+                            
+                            <div class="form_grupo">
+                                <label for="bairro" class="form_label">Bairro</label>
+                                <input type="text" name="bairro" class="form_input" id="bairro" disabled>
+                            </div>
+                            
+                            <div class="form_grupo">
+                                <label for="cidade" class="form_label">Cidade</label>
+                                <input type="text" name="cidade" class="form_input" id="cidade" disabled>
+                            </div>
+                            
+                            <div class="form_grupo">
+                                <label for="uf" class="form_label">UF</label>
+                                <input type="text" name="uf" class="form_input" id="uf" disabled>
+                            </div>
+                            
+                            <div class="form_grupo">
+                                
+                                <label for="tiposervico" class="text">Tipo de Serviço</label>
+                                <select name="tiposervico" class="dropdown" id="tiposervico" required>
+                                    
+                                    <option selected disabled class="form_select_option" value="">Selecione</option>
+                                    <option value="Eletricista" class="form_select_option">Eletricista</option>
+                                    <option value="Pedreiro" class="form_select_option">Pedreiro</option>
+                                    <option value="Bombeiro Hidráulico" class="form_select_option">Bombeiro Hidráulico</option>                    
+                                    <option value="Marceneiro" class="form_select_option">Marceneiro</option>                    
+                                
+                                </select>
+
+                            </div>
+
+                            <div class="form_grupo">
+
+                                <div class="form_message">
+                                    
+                                    <label for="descricao" class="form_message_label"> Digite aqui a descrição do serviço</label>
+                                    <textarea name="descricao" id="descricao" cols="30" rows="5" class="form_input message_input" required></textarea>
+
+                                </div>
+
+                                <div class="submit">
+
+                                    <input type="hidden" name="acao" value="enviar">
+                                    <button type="submit" name="Submit" class="submit_btn" onclick="newItem()" >Cadastrar</button>
+                                    <button type="submit" name="Deletar" class="delete_btn" onclick="delItem()" >Apagar</button>
+                                
+                                </div>
+                        </form>
+
+                </div>
+                <!--Finaliza Formulário-->
+
+            </div><!--Box Artigo-->
+
+        </div>
+
+    </section><!--FECHA BOX HTML-->
+
+</main>
+
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
