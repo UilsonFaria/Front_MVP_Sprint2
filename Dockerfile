@@ -4,6 +4,8 @@ FROM nginx:latest
 
 # Copie os arquivos da aplicação para o diretório padrão do servidor web do Nginx
 COPY . /usr/share/nginx/html
+COPY ./css /usr/share/nginx/html/css
+COPY ./js /usr/share/nginx/html/js
 
 # O Nginx expõe a porta 80 por padrão, onde o servidor web irá rodar
 EXPOSE 80
