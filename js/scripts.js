@@ -20,7 +20,7 @@ const newItem = () => {
   if (inputTelefone === '') {
     alert("Favor informar o telefone do cliente!");
   } else {
-    insertList(inputTelefone, inputTipo, inputDescricao);
+    //insertList(inputTelefone, inputTipo, inputDescricao);
     postCliente(inputTelefone, inputNome, inputEmail, inputCep, inputLogradouro, inputNumero, inputComplemento, inputBairro, inputCidade, inputUf);
     postServico(inputTelefone, inputTipo, inputDescricao);
   }
@@ -53,9 +53,10 @@ const postCliente = async (inputTelefone, inputNome, inputEmail, inputCep, input
     .then((response) => response.json())
     .catch((error) => {
       console.error('Error:', error);
-    });    
-
+    }); 
+    
     alert("Cliente cadastrado!")
+
 }
 
 
@@ -190,7 +191,7 @@ const delItem = () => {
 
   let inputTelefone = document.getElementById("telefone").value;
   
-  if (confirm("Tem certeza que deseja excluir o serviço?")) {
+  if (confirm("Tem certeza que deseja excluir a solicitação de serviço?")) {
     deleteCliente(inputTelefone);
     deleteServico(inputTelefone);
   }
@@ -214,7 +215,6 @@ const deleteCliente = (item) => {
       console.error('Error:', error);
     });
 
-    alert("Cliente removido!")
 }
 
 
@@ -235,7 +235,10 @@ const deleteServico = (item) => {
       console.error('Error:', error);
     });
 
-    alert("Serviço removido!")
+    alert("Solicitação de serviço removida!")
+
+    window.location.reload(true);
+
 }
 
 
